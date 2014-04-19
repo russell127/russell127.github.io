@@ -2,10 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>The First Page</title>
+  <title>Christopher</title>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <link href="fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet">
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="fancybox/jquery.fancybox-1.3.4.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('#btnFadeImg').click(function() {
+      $('#chrisImg').slideToggle(1500);
+      if ($('#btnFadeImg').html() == 'Fade Img')
+      {
+        $('#btnFadeImg').html('Zoom in and Change');
+      }
+      else
+      {
+        $('#btnFadeImg').html('Fade Img');
+      }
+    }); // click
+    $('#gallery a').fancybox();
+  }); // ready
+  </script>
 </head>
 <body>
-  <h1>Test Page</h1>
-  This is just a test page to see if everything works.
+  <article>
+  <h1>All About Christopher</h1>
+  <img class="center" id="chrisImg" src="camping_sep_09 030.jpg" width="320" height="240">
+  <p class="about">
+    Christopher is a <em>wonderful</em> kid!  He loves cars, especially
+    <a href="http://www.ford.com" rel="external" title="Learn more about Ford cars">Ford<img src="ford-logo4.png"></a> and
+    <a href="http://www.porsche.com" rel="external" title="Learn more about Porsche cars">Porsche<img height="21" width="21" src="porsche-logo2.jpg"></a> and
+    <a href="http://www.honda.com" rel="external" title="Learn more about Honda cars">Honda cars<img src="logo_small_honda-3.gif"></a> and
+    <a href="http://www.acura.com" rel="external" title="Learn more about Acura cars">Acura cars<img  height="21" width="21" src="acura-logo-small_full-2.jpg"></a>
+  </p>
+  <p class="about">
+    He also likes Minecraft. His favorite minecraft sites are
+    <a href="http://minecraft.gamepedia.com/Minecraft_Wiki" rel="external" title="Learn more about Minecraft">Minecraft Wiki</a> and
+    <a href="https://minecraft.net/" rel="external" title="official minecraft site">Minecraft</a>
+  </p>
+  <p>
+    <button type="button" id="btnFadeImg">Fade Img</button>
+  </p>
+  <div id="gallery">
+  <a href="003.jpg" rel="gallery">Image1</a>
+  <a href="007.jpg" rel="gallery">Image2</a>
+  <a href="030.jpg" rel="gallery">Image3</a>
+  <a href="kangaroos32008 001.jpg" rel="gallery">Image4</a>
+  <a href="house32008 021.jpg" rel="gallery">Image5</a>
+  <a href="030.jpg" rel="gallery">Image6</a>
+  <a href="MAY2008 027.jpg" rel="gallery">Image7</a>
+  <a href="minecraft1.jpg" rel="gallery">Image8</a>
+  </div>
+  <img src="08-2013-honda-civic.jpg" width="320" height="240">
+  <img id="minecraft-img" src="Minecraft-minecraft-19670226-1600-900.jpg" width="320" height="240">
+  </article>
 </body>
 </html>
